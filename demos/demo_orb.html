@@ -1,0 +1,724 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>orb.L(オーブエル) 栄町駅店 | 公式サイト提案デモ</title>
+<meta name="description" content="orb.L(オーブエル) 栄町駅店の提案用デモサイト。静けさまで、施術の一部にする。 Japan, 〒460-0003 Aichi, Nagoya, Naka Ward, Nishiki, 3-chōme−7−１２ Nishki Crystal, 2Fにある美容サロンです。">
+<meta property="og:title" content="orb.L(オーブエル) 栄町駅店">
+<meta property="og:description" content="静けさまで、施術の一部にする。">
+<meta property="og:image" content="../assets/demo_images/beauty_salon/hero.jpg">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "LocalBusiness", "name": "orb.L(オーブエル) 栄町駅店", "address": "Japan, 〒460-0003 Aichi, Nagoya, Naka Ward, Nishiki, 3-chōme−7−１２ Nishki Crystal, 2F", "telephone": "052-957-3666", "aggregateRating": {"@type": "AggregateRating", "ratingValue": "4.9", "bestRating": "5"}, "openingHoursSpecification": [{"day": 0, "open": "11:00", "close": "21:00"}, {"day": 1, "open": "11:00", "close": "21:00"}, {"day": 2, "open": "11:00", "close": "21:00"}, {"day": 3, "open": "11:00", "close": "21:00"}, {"day": 4, "open": "11:00", "close": "22:00"}, {"day": 5, "open": "11:00", "close": "22:00"}, {"day": 6, "open": "11:00", "close": "20:00"}]}</script>
+<style>
+:root {
+  --ink: #1b1717;
+  --paper: #fbf6f1;
+  --surface: #eadfd8;
+  --primary: #9a6a63;
+  --accent: #b88c6c;
+  --deep: #171111;
+  --muted: color-mix(in srgb, var(--ink) 58%, transparent);
+  --line: color-mix(in srgb, var(--ink) 16%, transparent);
+  --font-heading: 'Cormorant Garamond', 'Noto Sans JP', serif;
+  --font-body: 'Noto Sans JP', sans-serif;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; background: var(--paper); }
+body {
+  min-width: 320px;
+  font-family: var(--font-body);
+  color: var(--ink);
+  background: var(--paper);
+  letter-spacing: 0;
+  overflow-x: hidden;
+}
+a { color: inherit; text-decoration: none; }
+img { display: block; max-width: 100%; }
+button, input { font: inherit; }
+.demo-ribbon {
+  position: fixed;
+  z-index: 80;
+  inset: 0 0 auto 0;
+  min-height: 32px;
+  display: grid;
+  place-items: center;
+  padding: 7px 16px;
+  background: var(--deep);
+  color: var(--paper);
+  font-size: .72rem;
+  font-weight: 900;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.nav {
+  position: fixed;
+  z-index: 70;
+  top: 32px;
+  left: 0;
+  right: 0;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 12px;
+  padding: 16px clamp(16px, 4vw, 48px);
+  color: var(--paper);
+  mix-blend-mode: difference;
+}
+.brand {
+  min-width: 0;
+  font-family: var(--font-heading);
+  font-size: clamp(1rem, 2.2vw, 1.42rem);
+  font-weight: 700;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.nav-links { display: none; gap: 22px; align-items: center; font-size: .78rem; font-weight: 400; letter-spacing: .06em; }
+.nav-cta {
+  display: inline-grid;
+  place-items: center;
+  min-height: 40px;
+  padding: 0 15px;
+  border: 1px solid currentColor;
+  border-radius: 2px;
+  font-size: .76rem;
+  font-weight: 400;
+  letter-spacing: .1em;
+}
+.hero {
+  min-height: 96svh;
+  display: grid;
+  grid-template-rows: 1fr auto;
+  color: var(--paper);
+  background:
+    linear-gradient(180deg, rgba(0,0,0,.18), rgba(0,0,0,.74)),
+    url('../assets/demo_images/beauty_salon/hero.jpg') center / cover no-repeat;
+}
+.hero-inner {
+  width: min(1360px, 100%);
+  margin: 0 auto;
+  padding: clamp(118px, 17vh, 178px) clamp(16px, 5vw, 72px) 36px;
+  display: grid;
+  align-content: end;
+  gap: clamp(20px, 4vw, 46px);
+}
+.hero-kicker {
+  width: fit-content;
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgba(255,255,255,.32);
+  font-size: .68rem;
+  font-weight: 300;
+  letter-spacing: .22em;
+  text-transform: uppercase;
+}
+h1 {
+  max-width: 14ch;
+  font-family: var(--font-heading);
+  font-size: clamp(2.25rem, 8.7vw, 6.7rem);
+  line-height: 1.08;
+  letter-spacing: .055em;
+  font-weight: 300;
+  text-wrap: balance;
+}
+.hero-copy {
+  display: grid;
+  gap: 20px;
+  width: 100%;
+  min-width: 0;
+  max-width: 720px;
+}
+.lead {
+  max-width: min(39rem, calc(100vw - 48px));
+  font-size: clamp(.92rem, 1.8vw, 1.18rem);
+  line-height: 2.1;
+  font-weight: 300;
+  color: rgba(255,255,255,.76);
+  overflow-wrap: anywhere;
+  word-break: break-all;
+  line-break: anywhere;
+  letter-spacing: .04em;
+}
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 52px;
+  padding: 0 20px;
+  border-radius: 8px;
+  font-size: .9rem;
+  font-weight: 900;
+  line-height: 1.2;
+  max-width: 100%;
+  transition: transform .18s ease, background .18s ease, color .18s ease;
+}
+.btn:hover { transform: translateY(-2px); }
+.btn-primary { background: var(--paper); color: var(--ink); }
+.btn-outline { border: 1px solid rgba(255,255,255,.48); color: var(--paper); }
+.hero-strip {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  border-top: 1px solid rgba(255,255,255,.24);
+  background: rgba(0,0,0,.24);
+  backdrop-filter: blur(14px);
+}
+.proof {
+  min-height: 96px;
+  padding: 16px clamp(14px, 3vw, 34px);
+  border-right: 1px solid rgba(255,255,255,.18);
+}
+.proof span { display: block; color: rgba(255,255,255,.64); font-size: .72rem; font-weight: 900; }
+.proof strong { display: block; margin-top: 8px; font-size: clamp(1.2rem, 4vw, 2.15rem); line-height: 1; }
+section { padding: clamp(74px, 10vw, 148px) clamp(16px, 5vw, 72px); }
+.container { width: min(1180px, 100%); margin: 0 auto; }
+.section-head {
+  display: grid;
+  gap: 18px;
+  margin-bottom: clamp(34px, 6vw, 72px);
+}
+.label {
+  color: var(--primary);
+  font-size: .72rem;
+  font-weight: 900;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+}
+.title {
+  max-width: 850px;
+  font-family: var(--font-heading);
+  font-size: clamp(2.4rem, 7.8vw, 6.2rem);
+  line-height: .96;
+  font-weight: 600;
+  text-wrap: balance;
+}
+.body {
+  max-width: 680px;
+  color: var(--muted);
+  font-size: clamp(.98rem, 1.7vw, 1.13rem);
+  line-height: 2.15;
+  font-weight: 600;
+}
+.intro-grid {
+  display: grid;
+  gap: 34px;
+}
+.intro-text {
+  display: grid;
+  align-content: center;
+  gap: 24px;
+}
+.intro-text p {
+  color: var(--muted);
+  font-size: clamp(1.02rem, 2vw, 1.25rem);
+  line-height: 2.2;
+  font-weight: 600;
+}
+.feature-list {
+  display: grid;
+  border-top: 1px solid var(--line);
+}
+.feature {
+  display: grid;
+  gap: 8px;
+  padding: 22px 0;
+  border-bottom: 1px solid var(--line);
+}
+.feature h3 { font-size: clamp(1.12rem, 2vw, 1.36rem); line-height: 1.35; }
+.feature p { color: var(--muted); line-height: 1.95; font-weight: 600; }
+.editorial-photo {
+  min-height: 58svh;
+  border-radius: 8px;
+  background: url('../assets/demo_images/beauty_salon/sub1.jpg') center / cover no-repeat;
+}
+.gallery {
+  background: var(--deep);
+  color: var(--paper);
+}
+.gallery .label { color: var(--accent); }
+.gallery .body { color: rgba(255,255,255,.66); }
+.photo-grid {
+  display: grid;
+  gap: clamp(14px, 2vw, 24px);
+}
+.photo {
+  min-height: 58svh;
+  border-radius: 8px;
+  overflow: hidden;
+  background-position: center;
+  background-size: cover;
+}
+.photo.one { background-image: url('../assets/demo_images/beauty_salon/sub2.jpg'); }
+.photo.two { background-image: url('../assets/demo_images/beauty_salon/sub3.jpg'); min-height: 44svh; }
+.photo.three { background-image: url('../assets/demo_images/beauty_salon/hero.jpg'); min-height: 44svh; }
+.reviews {
+  background:
+    linear-gradient(180deg, transparent, color-mix(in srgb, var(--surface) 46%, transparent));
+}
+.review-grid {
+  display: grid;
+  gap: 18px;
+}
+.review-card {
+  padding: 26px 0;
+  border-top: 1px solid var(--line);
+}
+.stars { color: var(--primary); letter-spacing: .08em; font-size: .82rem; }
+.review-text {
+  margin-top: 14px;
+  font-family: var(--font-heading);
+  font-size: clamp(1.24rem, 3vw, 2.05rem);
+  line-height: 1.65;
+}
+.review-author {
+  margin-top: 18px;
+  color: var(--muted);
+  font-size: .83rem;
+  font-weight: 900;
+}
+.review-time { margin-top: 4px; color: var(--muted); font-size: .75rem; }
+.diagnosis {
+  background: var(--surface);
+}
+.diagnosis-grid {
+  display: grid;
+  gap: 24px;
+}
+.score-board {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+.score-card {
+  min-height: 132px;
+  display: grid;
+  align-content: space-between;
+  gap: 14px;
+  padding: 18px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: color-mix(in srgb, var(--paper) 76%, transparent);
+}
+.score-card span {
+  color: var(--muted);
+  font-size: .74rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+.score-card strong {
+  font-family: var(--font-heading);
+  font-size: clamp(2.4rem, 8vw, 4.8rem);
+  line-height: .9;
+}
+.score-card.low strong { color: var(--primary); }
+.diagnosis-list {
+  display: grid;
+  gap: 12px;
+}
+.diagnosis-list li {
+  list-style: none;
+  padding: 14px 0;
+  border-bottom: 1px solid var(--line);
+  color: var(--muted);
+  font-weight: 700;
+  line-height: 1.8;
+}
+.loss-box {
+  display: grid;
+  gap: 10px;
+  padding: 22px;
+  border-radius: 8px;
+  background: var(--deep);
+  color: var(--paper);
+}
+.loss-box strong {
+  font-family: var(--font-heading);
+  font-size: clamp(2.5rem, 9vw, 5.8rem);
+  line-height: .92;
+}
+.compare-table {
+  display: grid;
+  gap: 8px;
+  margin-top: 18px;
+  font-size: .86rem;
+  font-weight: 800;
+}
+.compare-row {
+  display: grid;
+  grid-template-columns: 1fr auto auto;
+  gap: 12px;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--line);
+}
+.access {
+  padding-bottom: 110px;
+}
+.access-grid {
+  display: grid;
+  gap: 24px;
+}
+.info-list {
+  display: grid;
+  border-top: 1px solid var(--line);
+}
+.info-row {
+  display: grid;
+  grid-template-columns: 7.5rem minmax(0, 1fr);
+  gap: 14px;
+  padding: 18px 0;
+  border-bottom: 1px solid var(--line);
+}
+.info-row dt {
+  color: var(--primary);
+  font-size: .76rem;
+  font-weight: 900;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
+.info-row dd {
+  color: var(--ink);
+  line-height: 1.8;
+  font-weight: 700;
+}
+.map-frame {
+  height: min(68svh, 620px);
+  min-height: 360px;
+  border-radius: 8px;
+  overflow: hidden;
+  background: var(--surface);
+}
+.map-frame iframe { width: 100%; height: 100%; border: 0; filter: grayscale(.08) saturate(.82) contrast(.96); }
+.roi {
+  display: grid;
+  gap: 22px;
+  margin-top: 28px;
+  padding-top: 24px;
+  border-top: 1px solid var(--line);
+}
+.roi-output {
+  font-family: var(--font-heading);
+  font-size: clamp(2.4rem, 8vw, 5.4rem);
+  line-height: 1;
+}
+.range-row {
+  display: grid;
+  gap: 8px;
+}
+.range-row label {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  color: var(--muted);
+  font-size: .82rem;
+  font-weight: 900;
+}
+input[type="range"] { width: 100%; accent-color: var(--primary); }
+.video-section { background: var(--surface); }
+.video-frame {
+  aspect-ratio: 16 / 9;
+  border-radius: 8px;
+  overflow: hidden;
+  background: var(--deep);
+}
+.video-frame iframe, .video-frame video { width: 100%; height: 100%; border: 0; display: block; }
+.final-cta {
+  min-height: 72svh;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  color: var(--paper);
+  background:
+    linear-gradient(180deg, rgba(0,0,0,.25), rgba(0,0,0,.72)),
+    url('../assets/demo_images/beauty_salon/sub3.jpg') center / cover no-repeat;
+}
+.final-cta .title { margin: 0 auto; }
+.final-cta .body { margin: 22px auto 0; color: rgba(255,255,255,.76); }
+.final-cta .hero-actions { justify-content: center; margin-top: 28px; }
+.sticky-cta {
+  position: fixed;
+  z-index: 90;
+  left: 10px;
+  right: 10px;
+  bottom: 10px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  padding: 8px;
+  border: 1px solid rgba(255,255,255,.36);
+  border-radius: 8px;
+  background: color-mix(in srgb, var(--deep) 88%, transparent);
+  color: var(--paper);
+  backdrop-filter: blur(18px);
+  box-shadow: 0 20px 54px rgba(0,0,0,.24);
+  transform: translateY(125%);
+  transition: transform .24s ease;
+}
+body.scrolled .sticky-cta {
+  transform: translateY(0);
+}
+.sticky-cta a {
+  display: grid;
+  place-items: center;
+  min-height: 44px;
+  border-radius: 6px;
+  font-size: .82rem;
+  font-weight: 900;
+}
+.sticky-cta a:first-child { background: var(--paper); color: var(--ink); }
+.reveal { opacity: 0; transform: translateY(22px); transition: opacity .7s ease, transform .7s ease; }
+.reveal.in { opacity: 1; transform: translateY(0); }
+@media (min-width: 760px) {
+  .nav { grid-template-columns: minmax(0, 1fr) auto auto; }
+  .nav-links { display: flex; }
+  .hero-copy { margin-left: 24vw; }
+  .intro-grid { grid-template-columns: .9fr 1.1fr; align-items: center; }
+  .photo-grid { grid-template-columns: 1.2fr .8fr; align-items: end; }
+  .photo.one { grid-row: span 2; min-height: 82svh; }
+  .review-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .diagnosis-grid { grid-template-columns: 1.02fr .98fr; align-items: start; }
+  .access-grid { grid-template-columns: .86fr 1.14fr; align-items: start; }
+  .sticky-cta { left: auto; width: 360px; }
+}
+@media (max-width: 560px) {
+  h1 { font-size: clamp(3rem, 20vw, 4.8rem); }
+  .hero-inner { padding-left: 18px; padding-right: 18px; }
+  .lead { max-width: 18rem; font-size: .98rem; }
+  .nav { grid-template-columns: minmax(0, 1fr); }
+  .nav-cta { display: none; }
+  .hero-strip { grid-template-columns: 1fr; }
+  .proof { min-height: 74px; border-right: 0; border-bottom: 1px solid rgba(255,255,255,.18); }
+  .info-row { grid-template-columns: 1fr; gap: 6px; }
+  .btn { width: 100%; }
+}
+</style>
+</head>
+<body>
+<div class="demo-ribbon">提案用デモ / 実データ接続: API未設定: 生成済み公式風写真 / サンプル口コミ</div>
+<nav class="nav" aria-label="主要ナビゲーション">
+  <a class="brand" href="#">orb.L(オーブエル) 栄町駅店</a>
+  <div class="nav-links">
+    <a href="#story">Story</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#reviews">Reviews</a>
+    <a href="#access">Access</a>
+  </div>
+  <a class="nav-cta" href="tel:0529573666">電話する</a>
+</nav>
+
+<header class="hero">
+  <div class="hero-inner">
+    <div class="hero-kicker">美容サロン / Japan, 〒460-0003 Aichi, Nagoya, Naka Ward, Nishiki, 3-chōme−7−１２ Nishki Crystal, 2F</div>
+    <h1>orb.L(オーブエル) 栄町駅店</h1>
+    <div class="hero-copy reveal">
+      <p class="lead">静けさまで、施術の一部にする。<br>サロンの技術と空間の魅力を、初回予約につながる順番で整理します。</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="tel:0529573666">今すぐ問い合わせる</a>
+        <a class="btn btn-outline" href="#access">場所と営業時間を見る</a>
+      </div>
+    </div>
+  </div>
+  <div class="hero-strip">
+    <div class="proof"><span>Rating</span><strong>4.9 / 5.0</strong></div>
+    <div class="proof"><span>Reviews</span><strong>38</strong></div>
+    <div class="proof"><span>Status</span><strong id="openStatusHero">--</strong></div>
+  </div>
+</header>
+
+<main>
+  <section id="story">
+    <div class="container intro-grid">
+      <div class="intro-text reveal">
+        <div class="label">Why This Works</div>
+        <h2 class="title">広告ではなく、店の空気で選ばせる。</h2>
+        <p>サロンの技術と空間の魅力を、初回予約につながる順番で整理します。 初めて見る人に必要なのは説明の量ではありません。写真、余白、口コミ、連絡先が正しい順番であることです。</p>
+        <div class="feature-list"><article class="feature">
+  <h3>清潔感</h3>
+  <p>白さだけでなく、素材と光で安心感を作ります。</p>
+</article>
+<article class="feature">
+  <h3>相談導線</h3>
+  <p>初回の不安を、メニューより先に言語化します。</p>
+</article>
+<article class="feature">
+  <h3>信頼の温度</h3>
+  <p>安売りではなく、丁寧さを写真と口コミで伝えます。</p>
+</article></div>
+      </div>
+      <div class="editorial-photo reveal" aria-label="店舗写真"></div>
+    </div>
+  </section>
+
+  <section class="gallery" id="gallery">
+    <div class="container">
+      <div class="section-head reveal">
+        <div class="label">Visual Direction</div>
+        <h2 class="title">画面の半分以上を、信頼できる写真に渡す。</h2>
+        <p class="body">小さな店舗ほど、装飾より実在感です。引き、寄り、手元、席の温度を混ぜて「行く前から知っている」状態を作ります。</p>
+      </div>
+      <div class="photo-grid">
+        <div class="photo one reveal"></div>
+        <div class="photo two reveal"></div>
+        <div class="photo three reveal"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="reviews" id="reviews">
+    <div class="container">
+      <div class="section-head reveal">
+        <div class="label">Social Proof</div>
+        <h2 class="title">最後の迷いは、第三者の言葉で落とす。</h2>
+        <p class="body">Google Places APIキー未設定のため、このデモでは口コミ表示のみサンプルです。キー設定後は実レビューに差し替わります。</p>
+      </div>
+      <div class="review-grid"><article class="review-card reveal">
+  <div class="stars">★★★★★</div>
+  <p class="review-text">料理も雰囲気も良く、また利用したいと思いました。</p>
+  <div class="review-author">Googleユーザー</div>
+  <div class="review-time">最近</div>
+</article>
+<article class="review-card reveal">
+  <div class="stars">★★★★</div>
+  <p class="review-text">落ち着いて過ごせるお店です。場所もわかりやすかったです。</p>
+  <div class="review-author">Googleユーザー</div>
+  <div class="review-time">最近</div>
+</article>
+<article class="review-card reveal">
+  <div class="stars">★★★★★</div>
+  <p class="review-text">スタッフの対応が丁寧で、初めてでも入りやすかったです。</p>
+  <div class="review-author">Googleユーザー</div>
+  <div class="review-time">最近</div>
+</article></div>
+    </div>
+  </section>
+
+  
+
+  
+
+  <section class="access" id="access">
+    <div class="container access-grid">
+      <div class="reveal">
+        <div class="section-head">
+          <div class="label">Visit</div>
+          <h2 class="title">迷った瞬間に、電話と地図へ。</h2>
+          <p class="body">スマホで見た人がその場で動けるよう、必要な情報だけを近くに置きます。</p>
+        </div>
+        <dl class="info-list">
+          <div class="info-row"><dt>Address</dt><dd>Japan, 〒460-0003 Aichi, Nagoya, Naka Ward, Nishiki, 3-chōme−7−１２ Nishki Crystal, 2F</dd></div>
+          <div class="info-row"><dt>Phone</dt><dd><a href="tel:0529573666">052-957-3666</a></dd></div>
+          <div class="info-row"><dt>Hours</dt><dd id="todayHoursText">営業時間を確認中</dd></div>
+          <div class="info-row"><dt>Photos</dt><dd>生成済み公式風写真</dd></div>
+        </dl>
+        <div class="roi">
+          <div>
+            <div class="label">Sales Logic</div>
+            <div class="roi-output"><span id="requiredGuests">5</span>人</div>
+            <p class="body" id="roiNote">月額費用を回収するのに必要な来店数です。</p>
+          </div>
+          <div class="range-row">
+            <label for="monthlyCost"><span>月額費用</span><span id="monthlyCostLabel">30,000円</span></label>
+            <input id="monthlyCost" type="range" min="10000" max="120000" value="30000" step="5000">
+          </div>
+          <div class="range-row">
+            <label for="ticketPrice"><span>客単価</span><span id="ticketPriceLabel">7,000円</span></label>
+            <input id="ticketPrice" type="range" min="500" max="20000" value="7000" step="500">
+          </div>
+        </div>
+      </div>
+      <div class="map-frame reveal">
+        <iframe src="https://maps.google.com/maps?q=orb.L%28%E3%82%AA%E3%83%BC%E3%83%96%E3%82%A8%E3%83%AB%29%20%E6%A0%84%E7%94%BA%E9%A7%85%E5%BA%97%20Japan%2C%20%E3%80%92460-0003%20Aichi%2C%20Nagoya%2C%20Naka%20Ward%2C%20Nishiki%2C%203-ch%C5%8Dme%E2%88%927%E2%88%92%EF%BC%91%EF%BC%92%20Nishki%20Crystal%2C%202F&amp;output=embed" title="orb.L(オーブエル) 栄町駅店の地図" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+  </section>
+
+  <section class="final-cta">
+    <div class="container reveal">
+      <div class="label">Ready in 24h</div>
+      <h2 class="title">この見え方まで、明日持っていく。</h2>
+      <p class="body">Googleマップだけで終わっていた来店前の判断を、公式サイトで受け止めます。</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="tel:0529573666">電話で相談する</a>
+        <a class="btn btn-outline" href="https://maps.google.com/?cid=3254906788028662467" target="_blank" rel="noopener">Googleマップを開く</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<div class="sticky-cta" aria-label="固定アクション">
+  <a href="tel:0529573666">電話する</a>
+  <a href="https://maps.google.com/?cid=3254906788028662467" target="_blank" rel="noopener">地図を見る</a>
+</div>
+
+<script>
+const weeklyHours = [{"day": 0, "open": "11:00", "close": "21:00"}, {"day": 1, "open": "11:00", "close": "21:00"}, {"day": 2, "open": "11:00", "close": "21:00"}, {"day": 3, "open": "11:00", "close": "21:00"}, {"day": 4, "open": "11:00", "close": "22:00"}, {"day": 5, "open": "11:00", "close": "22:00"}, {"day": 6, "open": "11:00", "close": "20:00"}];
+
+const revealObserver = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('in');
+      revealObserver.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.12 });
+document.querySelectorAll('.reveal').forEach((el) => revealObserver.observe(el));
+
+function updateStickyState() {
+  document.body.classList.toggle('scrolled', window.scrollY > window.innerHeight * 0.55);
+}
+window.addEventListener('scroll', updateStickyState, { passive: true });
+updateStickyState();
+
+function minutes(value) {
+  const parts = String(value).split(':').map(Number);
+  return parts[0] * 60 + parts[1];
+}
+function formatToday(item) {
+  if (!item) return '営業時間はGoogleマップでご確認ください。';
+  return item.open + ' - ' + item.close;
+}
+function updateOpenStatus() {
+  const now = new Date();
+  const day = now.getDay();
+  const current = now.getHours() * 60 + now.getMinutes();
+  const today = weeklyHours.find((item) => Number(item.day) === day);
+  let isOpen = false;
+  if (today) {
+    const open = minutes(today.open);
+    const close = minutes(today.close);
+    isOpen = close > open ? current >= open && current < close : current >= open || current < close;
+  }
+  const label = isOpen ? 'OPEN' : 'CLOSED';
+  const detail = (isOpen ? '現在営業中 / 本日 ' : '現在営業時間外 / 本日 ') + formatToday(today);
+  document.getElementById('openStatusHero').textContent = label;
+  document.getElementById('todayHoursText').textContent = detail;
+}
+updateOpenStatus();
+setInterval(updateOpenStatus, 60000);
+
+function yen(value) {
+  return Number(value).toLocaleString('ja-JP') + '円';
+}
+function updateRoi() {
+  const monthly = Number(document.getElementById('monthlyCost').value);
+  const ticket = Number(document.getElementById('ticketPrice').value);
+  const guests = Math.max(1, Math.ceil(monthly / ticket));
+  const weekly = Math.max(1, Math.ceil(guests / 4));
+  document.getElementById('monthlyCostLabel').textContent = yen(monthly);
+  document.getElementById('ticketPriceLabel').textContent = yen(ticket);
+  document.getElementById('requiredGuests').textContent = guests;
+  document.getElementById('roiNote').textContent = yen(monthly) + ' ÷ 客単価' + yen(ticket) + ' = 月' + guests + '人。週では約' + weekly + '人です。';
+}
+document.getElementById('monthlyCost').addEventListener('input', updateRoi);
+document.getElementById('ticketPrice').addEventListener('input', updateRoi);
+updateRoi();
+</script>
+</body>
+</html>
